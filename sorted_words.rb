@@ -4,11 +4,11 @@
 # until they just hit enter to return a blank word.
 # Then sort the array using the sort method and print it out.
 
-def words
+def sorted_words
   puts "Type as many words as you wish.\nSeparate each word with a space.\nHit enter when you have finished."
   words = gets.chomp.scan(/\w+/)
   puts 'Here are your words:'
   puts words.sort
 end
 
-words
+sorted_words
