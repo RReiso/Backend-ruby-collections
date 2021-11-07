@@ -4,12 +4,17 @@ def greet
   names = []
   %w[first middle last].each do |word|
     puts "What is your #{word} name?"
-    user_input = gets.chomp
-    names << user_input
+    unless (user_input = gets.chomp) == ''
+      names << user_input
+    end
   end
-  print 'Hello,'
-  names.each { |name| print " #{name}" }
-  puts '!'
+  if names.empty?
+    puts 'You have not entered your name!'
+  else
+    print 'Hello,'
+    names.each { |name| print " #{name}" }
+    puts '!'
+  end
 end
 
 greet
